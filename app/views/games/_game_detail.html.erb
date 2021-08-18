@@ -1,0 +1,11 @@
+<div data-controller="game" data-game-id-value="<%= game.id %>" id="<%= dom_id(game) %>">
+  <h1><%= "#{game.home_team} vs. #{game.away_team}" %></h1>
+  <div class="score-container">
+    <div><%= game.home_team %>:</div>
+    <%= render "score", score: game.home_team_score, team: "home" %>
+  </div>
+  <div class="score-container">
+    <div><%= game.away_team %>:</div>
+    <%= render "score", score: game.away_team_score, team: "away" %>
+  </div>
+</div>
